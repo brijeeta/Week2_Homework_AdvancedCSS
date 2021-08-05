@@ -1,0 +1,75 @@
+body {
+    font-family: "Rubik", "Arial", sans-serif;
+    font-size: 16px;
+    color: #5e5e5e;
+    line-height: 1.5;
+}
+
+header {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 800;
+}
+
+header div nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 10em;
+    font-size: 14px;
+}
+
+
+/* .masthead {
+    padding: 6em 0;
+    background-image: linear-gradient( rgba(0, 238, 255, 0.45), rgba(251, 255, 0, 0.45)), url(../images/portfolio-background.jpg);
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-bottom: 2px solid black;
+}
+
+.masthead-heading {
+    margin-top: -0.2em;
+    font-weight: bold;
+    font-size: 4em;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    font-family: 'Gowun Batang', serif;
+}
+
+.masthead-intro {
+    margin-bottom: 0.1em;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.masthead,
+.masthead-intro,
+footer {
+    text-align: center;
+}
+
+header div nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 10em;
+    font-size: 14px;
+    font-family: 'Oleo Script', cursive;
+}
+
+main {
+    width: 96%;
+    margin: 2rem auto;
+} */
+
+
+/* footer {
+    margin: 1.5rem;
+    padding: 30px;
+} */
