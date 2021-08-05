@@ -36,9 +36,49 @@ nav {
     background-color: #FFFFFF;
 }
 
-.logo img {
+
+/* .logo img {
     height: 45px;
+} */
+
+
+/* ................................... */
+
+.site-logo {
+    width: 32px;
+    height: 32px;
+    display: block;
+    overflow: visible;
+    border: 4px solid #000;
+    position: relative;
+    transform: rotate(0deg);
+    transition: transform .4s ease-in-out;
+    flex-shrink: 0
 }
+
+.site-logo .logo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform .4s ease-in-out;
+    font-weight: 700;
+    font-size: 13px
+}
+
+.site-logo:hover {
+    opacity: 1;
+    transform: rotate(-90deg);
+    transition: transform .4s ease-in-out
+}
+
+.site-logo:hover .logo-text {
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center
+}
+
+
+/* .............................................. */
 
 nav ul {
     display: flex;
@@ -65,8 +105,34 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #2adabc;
+    background-color: lightblue;
     color: #FFFFFF;
     box-shadow: 5px 10px 30px rgba(64 198 196 0.3);
     transition: all ease 0.2s;
+}
+
+.model img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.model {
+    width: 400px;
+    height: 800px;
+    margin-left: 40px;
+}
+
+
+/* media queries */
+
+
+/* site logo */
+
+@media(min-width:600px) {
+    .site-logo {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #000
+    }
 }
