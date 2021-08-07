@@ -1,75 +1,382 @@
 body {
-    font-family: "Rubik", "Arial", sans-serif;
-    font-size: 16px;
-    color: #5e5e5e;
-    line-height: 1.5;
+    background-color: #0c0c0c;
 }
 
-header {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 0;
+
+/* Top section */
+
+.mast-head {
+    /* background-color: #0c0c0c; */
+    background-color: hsla(0, 0%, 100%, 1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 10px rgba(0, 0, 30px, 0.02);
+    position: fixed;
     left: 0;
-    z-index: 800;
-}
-
-header div nav ul li {
-    display: inline-block;
-    margin-left: 25px;
-    margin-top: 10em;
-    font-size: 14px;
-}
-
-
-/* .masthead {
-    padding: 6em 0;
-    background-image: linear-gradient( rgba(0, 238, 255, 0.45), rgba(251, 255, 0, 0.45)), url(../images/portfolio-background.jpg);
-    height: 300px;
+    top: 0;
     width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    padding: 2.5rem;
-    border-bottom: 2px solid black;
+    z-index: 1;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
-.masthead-heading {
-    margin-top: -0.2em;
+
+/* nav bar */
+
+.mast-head nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 25px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+
+/* nav items */
+
+.mast-head .nav-link {
+    padding: 10px 20px;
+    /* color: hsla(0, 0%, 100%, 0.82); */
+    color: #0c0c0c;
+    text-decoration: none;
+    font-family: serif;
+    border-radius: 12px;
     font-weight: bold;
-    font-size: 4em;
-    letter-spacing: -0.02em;
-    color: #ffffff;
-    font-family: 'Gowun Batang', serif;
 }
 
-.masthead-intro {
-    margin-bottom: 0.1em;
-    font-size: 2em;
-    color: #ffffff;
+nav ul {
+    display: flex;
 }
 
-.masthead,
-.masthead-intro,
-footer {
+.mast-head nav ul li a:hover {
+    /* background-color: #5b575c; */
+    background-color: #0c0c0c;
+    box-shadow: 5px 5px rgba(0, 0, 30px, 0.02);
+    transition: all ease 0.2s;
+}
+
+
+/* top section site logo */
+
+.site-logo {
+    /* color: rgba(255, 255, 255, 0.82); */
+    color: #0c0c0c;
+    width: 32px;
+    height: 32px;
+    display: block;
+    overflow: visible;
+    /* border: 4px solid rgba(255, 255, 255, 0.82); */
+    border: 4px solid #0c0c0c;
+    position: relative;
+    transform: rotate(0deg);
+    transition: transform .4s ease-in-out;
+    flex-shrink: 0;
+}
+
+.site-logo .logo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform .4s ease-in-out;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.site-logo:hover {
+    opacity: 1;
+    transform: rotate(-90deg);
+    transition: transform .4s ease-in-out
+}
+
+.site-logo:hover .logo-text {
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center
+}
+
+
+/* section 2 with main heading and  profile image */
+
+.section-2 {
+    display: block;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding-top: 200px;
+    padding-bottom: 40px;
+}
+
+.container-2 {
+    max-width: 1200px;
+    padding-left: 150px;
+}
+
+.heading {
+    max-width: 1500px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: hsla(0, 0%, 100%, 0.82);
+    font-size: 28px;
+    font-family: sans-serif;
+}
+
+.text-block {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.82);
+}
+
+.container-2 div img {
+    /* width: 100%; */
+    height: 589px;
+    width: 502px;
+    /* padding-right: 400px; */
+}
+
+
+/* Selected Projects */
+
+.section-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: hsla(0, 0%, 100%, 1);
+    padding-top: 150px;
+}
+
+
+/* project heading */
+
+h2 {
     text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #0c0c0c;
+    padding-bottom: 20px;
 }
 
-header div nav ul li {
-    display: inline-block;
-    margin-left: 25px;
-    margin-top: 10em;
+
+/* container for projects */
+
+.collection-item {
+    flex-direction: row;
+    background-color: #0c0c0c;
+    padding: 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* project card */
+
+.collection {
+    display: flex;
+    flex-direction: column;
+    transition: flex-basis 500ms linear;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: hsla(0, 0%, 100%, 0.82);
+    padding: 10px;
+    margin: 20px;
+    color: #0c0c0c;
+    cursor: pointer;
+    width: 450px;
+    height: 500px;
+}
+
+
+/* see project */
+
+.overlay-button {
+    padding: 12px;
+    margin: 10px;
+    color: #adce36;
+    text-decoration: none;
+    font-family: serif;
+    border-radius: 12px;
+    font-weight: bold;
+    width: 120px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: hsla(0, 0%, 100%, 0.82);
+}
+
+.collection:hover,
+.collection:hover .overlay-button {
+    box-shadow: inset 0px 0px 8px #e0ecb5, 0 0 15px #adce36;
+}
+
+h3 {
+    padding: 20px;
+    text-align: center;
+    background-color: #666;
+}
+
+.collection img {
+    width: 100%;
+    height: 300px;
+}
+
+
+/* section-4 contact form */
+
+.section-4 {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 1);
+    padding-top: 50px;
+    padding-bottom: 100px;
     font-size: 14px;
-    font-family: 'Oleo Script', cursive;
 }
 
-main {
-    width: 96%;
-    margin: 2rem auto;
-} */
+h4 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    background-color: hsla(0, 0%, 100%, 1);
+    color: #0c0c0c;
+}
+
+
+/* form header + form */
+
+.container-4 {
+    /* width: 900px; */
+    /* display: flex; */
+    /* padding-left: 150px; */
+    color: hsla(0, 0%, 100%, 1);
+}
+
+
+/* form selectors */
+
+.container-5 {
+    border-radius: 5px;
+    background-color: #0c0c0c;
+    padding: 20px;
+    width: 700px;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    /* border-radius: .25rem; */
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #b6aced;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #adce36;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #595959;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #adce36;
+    color: black;
+}
+
+.field-1 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.field-2 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* container 6 for footer  */
 
 
 /* footer {
-    margin: 1.5rem;
-    padding: 30px;
+    display: block;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: 100%;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 75px;
+    color: white;
 } */
+
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+
+/* Responsive layout for form - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 768px) {
+    .field-1,
+    .field-2 input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+/* responsive layout for background image  */
+
+@media screen and (max-width: 768px) {
+    .container-2 div img {
+        height: 383px;
+        width: 326px;
+    }
+}
