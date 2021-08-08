@@ -1,24 +1,26 @@
-body {
-    background-color: #0c0c0c;
+:root {
+    --backColor: #90a532;
+    --black: #0c0c0c;
+    --grey: #474747;
+    --newwhite: #e0ecb5;
+    --light: hsla(0, 0%, 100%, 1);
 }
 
 
 /* Top section */
 
 .mast-head {
-    /* background-color: #0c0c0c; */
-    background-color: hsla(0, 0%, 100%, 1);
+    background-color: var(--backColor);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 5px 10px rgba(0, 0, 30px, 0.02);
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 1;
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 
@@ -41,8 +43,7 @@ body {
 
 .mast-head .nav-link {
     padding: 10px 20px;
-    /* color: hsla(0, 0%, 100%, 0.82); */
-    color: #0c0c0c;
+    color: var(--black);
     text-decoration: none;
     font-family: serif;
     border-radius: 12px;
@@ -54,24 +55,22 @@ nav ul {
 }
 
 .mast-head nav ul li a:hover {
-    /* background-color: #5b575c; */
-    background-color: #0c0c0c;
+    background-color: var(--grey);
     box-shadow: 5px 5px rgba(0, 0, 30px, 0.02);
     transition: all ease 0.2s;
+    color: #fdfdfd;
 }
 
 
 /* top section site logo */
 
 .site-logo {
-    /* color: rgba(255, 255, 255, 0.82); */
-    color: #0c0c0c;
+    color: var(--black);
     width: 32px;
     height: 32px;
     display: block;
     overflow: visible;
-    /* border: 4px solid rgba(255, 255, 255, 0.82); */
-    border: 4px solid #0c0c0c;
+    border: 4px solid var(--black);
     position: relative;
     transform: rotate(0deg);
     transition: transform .4s ease-in-out;
@@ -108,8 +107,9 @@ nav ul {
     top: 0;
     width: 100%;
     z-index: 1;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 40px;
+    background-color: var(--black);
 }
 
 .container-2 {
@@ -119,10 +119,11 @@ nav ul {
 
 .heading {
     max-width: 1500px;
+    max-width: 900px;
     margin-top: 25px;
     margin-bottom: 25px;
-    color: hsla(0, 0%, 100%, 0.82);
-    font-size: 28px;
+    color: var(--newwhite);
+    font-size: 20px;
     font-family: sans-serif;
 }
 
@@ -131,14 +132,12 @@ nav ul {
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    color: hsla(0, 0%, 100%, 0.82);
+    color: var(--newwhite);
 }
 
 .container-2 div img {
-    /* width: 100%; */
     height: 589px;
     width: 502px;
-    /* padding-right: 400px; */
 }
 
 
@@ -148,8 +147,9 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: hsla(0, 0%, 100%, 1);
-    padding-top: 150px;
+    background-color: var(--backColor);
+    padding-top: 100px;
+    align-items: center;
 }
 
 
@@ -159,7 +159,7 @@ h2 {
     text-align: center;
     margin-bottom: 10px;
     font-size: 28px;
-    color: #0c0c0c;
+    color: var(--black);
     padding-bottom: 20px;
 }
 
@@ -168,7 +168,7 @@ h2 {
 
 .collection-item {
     flex-direction: row;
-    background-color: #0c0c0c;
+    background-color: var(--black);
     padding: 20px 50px;
     display: flex;
     flex-wrap: wrap;
@@ -185,13 +185,12 @@ h2 {
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
-    border-color: hsla(0, 0%, 100%, 0.82);
+    border-color: var(--light);
     padding: 10px;
     margin: 20px;
-    color: #0c0c0c;
+    color: var(--backColor);
     cursor: pointer;
     width: 450px;
-    height: 500px;
 }
 
 
@@ -200,7 +199,7 @@ h2 {
 .overlay-button {
     padding: 12px;
     margin: 10px;
-    color: #adce36;
+    color: var(--backColor);
     text-decoration: none;
     font-family: serif;
     border-radius: 12px;
@@ -208,18 +207,19 @@ h2 {
     width: 120px;
     border-style: solid;
     border-width: 1px;
-    border-color: hsla(0, 0%, 100%, 0.82);
+    border-color: var(--light);
 }
 
 .collection:hover,
 .collection:hover .overlay-button {
-    box-shadow: inset 0px 0px 8px #e0ecb5, 0 0 15px #adce36;
+    box-shadow: inset 0px 0px 8px var(--newwhite), 0 0 15px var(--backColor);
+    transform: scale(1.1);
 }
 
 h3 {
     padding: 20px;
     text-align: center;
-    background-color: #666;
+    background-color: var(--grey);
 }
 
 .collection img {
@@ -235,7 +235,7 @@ h3 {
     justify-content: center;
     text-decoration: none;
     align-items: center;
-    background-color: hsla(0, 0%, 100%, 1);
+    background-color: var(--backColor);
     padding-top: 50px;
     padding-bottom: 100px;
     font-size: 14px;
@@ -244,18 +244,14 @@ h3 {
 h4 {
     font-size: 28px;
     margin-bottom: 30px;
-    background-color: hsla(0, 0%, 100%, 1);
-    color: #0c0c0c;
+    color: var(--black);
 }
 
 
 /* form header + form */
 
 .container-4 {
-    /* width: 900px; */
-    /* display: flex; */
-    /* padding-left: 150px; */
-    color: hsla(0, 0%, 100%, 1);
+    color: var(--light);
 }
 
 
@@ -263,7 +259,7 @@ h4 {
 
 .container-5 {
     border-radius: 5px;
-    background-color: #0c0c0c;
+    background-color: var(--black);
     padding: 20px;
     width: 700px;
 }
@@ -273,18 +269,18 @@ select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--light);
     border-radius: 4px;
     resize: vertical;
-    /* border-radius: .25rem; */
+    border-radius: .25rem;
 }
 
 .form-control:focus {
     color: #495057;
-    background-color: #fff;
-    border-color: #b6aced;
+    background-color: var(--light);
+    border-color: var(--light);
     outline: 0;
-    box-shadow: 0 0 0 .2rem #adce36;
+    box-shadow: 0 0 0 .2rem var(--backColor);
 }
 
 label {
@@ -294,8 +290,9 @@ label {
 
 input[type=submit] {
     background-color: #595959;
-    color: white;
-    padding: 12px 20px;
+    color: var(--light);
+    margin-top: 10px;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -303,8 +300,8 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #adce36;
-    color: black;
+    background-color: var(--backColor);
+    color: var(--black);
 }
 
 .field-1 {
@@ -329,31 +326,15 @@ input[type=submit]:hover {
 }
 
 
-/* container 6 for footer  */
-
-
-/* footer {
-    display: block;
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    width: 100%;
-    border-top: 1px solid white;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 75px;
-    color: white;
-} */
+/*  footer  */
 
 .footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    color: white;
+    color: var(--light);
+    background: var(--black);
 }
 
 .footer p {
